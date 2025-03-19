@@ -1,0 +1,432 @@
+/* Import Josefin Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/* General Styles */
+body, html {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures navbar elements stay inside */
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+    white-space: nowrap; /* Prevents breaking */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjusted spacing */
+    padding: 0;
+    margin-right: 20px;
+    flex-wrap: nowrap; /* Prevents breaking */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Slightly reduced font size to fit */
+    transition: color 0.3s;
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+.nav-links a:hover {
+    color: #FFB400;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("/public/images/hero-bg.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: white;
+    margin-bottom: 0; /* No margin */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #C1272D;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 20px;
+    background-color: #FFB400;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #E69500;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* Ensure footer links also turn white */
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #FFB400; /* Gold accent for hover */
+}
+
+/* Final Section - Image Left, Text Right */
+.final-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #1c0e0e; /* Ensure full red background */
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    margin-top: 0; /* No margin */
+}
+
+/* Container to align image and text */
+.final-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ensures full height */
+}
+
+/* Image on the left */
+.final-image {
+    flex: 1; /* 50% of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh; /* Ensures full section height */
+}
+
+.final-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full image without distortion */
+}
+
+/* Text box on the right */
+.final-text-box {
+    flex: 1; /* 50% of the screen */
+    background: #1c0e0e; /* Full red background */
+    padding: 50px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Ensures full height */
+}
+
+/* Headings */
+.final-text-box h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.final-text-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FFC107; /* Gold accent */
+}
+
+/* Paragraph */
+.final-text-box p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* CTA Button - Smaller width */
+.cta-button {
+    background: #FFC107;
+    color: #1A1A1A;
+    padding: 10px 20px; /* Reduce padding */
+    border: none;
+    font-size: 1rem; /* Slightly smaller text */
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+    width: fit-content; /* Makes sure it's only as wide as the text */
+    min-width: 150px; /* Ensures it doesn't get too small */
+}
+
+.cta-button:hover {
+    background: #E6A700;
+}
+
+.cta-button1 {
+    background: #FFC107;
+    color: #1A1A1A;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* 🔹 Centers text inside button */
+}
+
+.cta-button1:hover {
+    background: #E6A700;
+}
+
+/* My Workouts Section in Home */
+.my-workouts-home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0; /* Remove any padding */
+    background-color: #ea4a4a5a;
+    position: relative;
+}
+
+/* My Workouts Container */
+.my-workouts-container {
+    width: 100%;
+    max-width: 1400px;
+    background: #3B1616;
+    padding-bottom: 0; /* Ensure no extra padding */
+    padding-top: 40px; /* Maintain space */
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px; /* Pull the next section up */
+}
+
+/* Remove the black space between My Workouts & the next section */
+.my-workouts-home + .next-section {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove any extra padding */
+}
+
+
+/* Title */
+.my-workouts-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Workout Carousel */
+.workout-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Workout Scroll Section */
+.workout-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+    width: 90%;
+    justify-content: center;
+}
+
+.workout-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Workout Card */
+.workout-card {
+    background: #2E1A1A;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex: 0 0 420px;
+    height: 300px;
+}
+
+.workout-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Workout Images */
+.workout-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+/* Workout Title */
+.workout-title {
+    font-size: 1.3rem;
+    padding: 10px;
+    background: #ffda7c;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: block;
+    min-height: 40px;
+    line-height: 1.2;
+}
+
+/* Play Button */
+.resume-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 204, 0, 0.9);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.resume-btn:hover {
+    background: #ffcc66;
+}
+
+.scroll-btn {
+    background: #ffda7c;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+/* Adjust left & right button positions */
+.scroll-btn.left {
+    left: 15px;
+}
+
+.scroll-btn.right {
+    right: 15px;
+}
+
+.scroll-btn:hover {
+    background: #ffcc66;
+}

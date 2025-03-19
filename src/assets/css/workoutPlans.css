@@ -1,0 +1,246 @@
+/* General Workout Plans Container */
+.workout-plans-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #1c0e0e;
+    min-height: 100vh;
+    color: white;
+}
+
+/* 🔥 My Workouts Section (Netflix-style with left-aligned title) */
+.my-workouts-container {
+    margin-top: 80px; /* Adds space between nav bar and My Workouts */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #3B1616;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Left-aligned title */
+.my-workouts-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+/* Scrollable Section */
+.workout-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Workout Cards */
+.workout-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+    width: 85%;
+    justify-content: center; /* Center the scroll items */
+}
+
+/* Hide scrollbar */
+.workout-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual Workout Cards */
+.workout-card {
+    background: #ffda7c;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    flex: 0 0 370px;
+    height: 260px;
+}
+
+.workout-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Workout Images */
+.workout-card img {
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure container does not clip the hover effect */
+.workout-scroll {
+    overflow: visible !important; /* Allow the hover scaling effect */
+}
+
+/* Workout Title */
+.workout-title {
+    font-size: 1.3rem;
+    padding: 10px;
+    background: #ffda7c;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: block;
+    min-height: 40px;
+    line-height: 1.2;
+    margin: 0; /* Ensure no unwanted spacing */
+}
+
+/* Resume Button */
+.resume-btn {
+    position: absolute;
+    top: 45%; /* Centers the button vertically */
+    left: 50%; /* Centers the button horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    background: rgba(218, 165, 32, 0.8); /* Gold with slight transparency */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes it a circle */
+    width: 50px; /* Size of the circle */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Triangle size */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect */
+.resume-btn:hover {
+    background: rgba(218, 165, 32, 1);
+}
+
+/* Disabled Resume Button */
+.resume-btn.disabled {
+    background: #444;
+    color: #999;
+    cursor: not-allowed;
+}
+
+
+/* 🔄 Scroll Buttons */
+.scroll-btn {
+    background: #ffda7c;
+    border: none;
+    color: #1c0e0e;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    z-index: 10; /* Ensure buttons are always visible */
+}
+
+/* 🔄 Left & Right Button Positions */
+.scroll-btn.left {
+    left: 10px;  /* Adjusted from negative to positive */
+}
+
+.scroll-btn.right {
+    right: 10px; /* Adjusted from negative to positive */
+}
+
+.scroll-btn:hover {
+    background: #ffcc66;
+}
+
+/* Ensure the buttons are within the parent */
+.workout-carousel {
+    position: relative;
+    overflow: hidden; /* Prevent clipping */
+}
+
+
+/* Center all scrolling sections */
+.workout-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px; /* Ensure spacing from My Workouts */
+}
+
+.workout-carousel {
+    justify-content: center; /* Centers everything below My Workouts */
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .my-workouts-title {
+        font-size: 1.8rem;
+    }
+
+    .workout-card {
+        flex: 0 0 320px;
+        height: 230px;
+    }
+
+    .scroll-btn {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .scroll-btn.left {
+        left: -35px;
+    }
+
+    .scroll-btn.right {
+        right: -35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workout-scroll {
+        width: 95%;
+    }
+
+    .workout-card {
+        flex: 0 0 290px;
+        height: 210px;
+    }
+
+    .scroll-btn {
+        display: block; /* Ensure they work on mobile */
+    }
+
+    .my-workouts-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .resume-btn {
+        width: 100%;
+    }
+}
