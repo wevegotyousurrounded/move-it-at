@@ -1,13 +1,13 @@
-/* Main Container */
+/* ✅ Page Background */
 .goals-progress-page {
-    background-color: #f9d2d2; /* Light pink background */
+    background-color: #1c0e0e; /* Dark red-brown */
     min-height: 100vh;
     font-family: sans-serif;
-    color: #4a4a4a;
+    color: #fff;
     padding: 20px;
   }
   
-  /* Header */
+  /* ✅ Header */
   .gp-header {
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@
   .gp-header h2 {
     font-size: 1.5rem;
     margin: 0;
-    color: #333;
+    color: #ffcc80; /* Soft warm accent */
   }
   
   .gp-menu-btn {
@@ -26,33 +26,41 @@
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
+    color: #ffcc80;
+    transition: color 0.3s ease;
   }
-  .gp-menu-icon {
-    font-size: 1.4rem;
+  .gp-menu-btn:hover {
+    color: #ff8c42; /* Lighter orange hover */
   }
   
-  /* Goals Section */
+  /* ✅ Goals Section */
   .gp-goals-section {
-    background-color: #b81d41;
-    color: white;
-    text-align: center;
-    padding: 16px;
+    background-color: #3B1616; /* Dark container */
     border-radius: 10px;
+    padding: 16px;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .gp-goals-section h3 {
+    margin: 0 0 8px 0;
+    color: #ffcc80;
   }
   
   .gp-workout-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
+    color: #fff;
   }
   
   .gp-time-range {
     font-size: 0.9rem;
     margin: 0;
+    color: #ff8c42;
   }
   
-  /* Days Row */
+  /* ✅ Days Row */
   .gp-days-row {
     display: flex;
     justify-content: space-around;
@@ -60,26 +68,34 @@
   }
   
   .gp-day-box {
-    background-color: #ffefef;
-    width: 30px;
+    background-color: #3B1616; /* Darker background */
+    width: 40px;
     height: 50px;
     border-radius: 4px;
     text-align: center;
     font-size: 0.8rem;
-    color: #333;
+    color: #ffcc80;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
   }
   
+  .gp-day-box:hover {
+    background-color: #ff8c42;
+    color: #1c0e0e;
+  }
+  
+  /* ✅ Active Day */
   .gp-day-box.active {
-    background-color: #b81d41;
-    color: white;
+    background-color: #ffcc80;
+    color: #1c0e0e;
   }
   
-  /* Chart Section */
+  /* ✅ Chart Section */
   .gp-chart-section {
-    background-color: #fff;
+    background-color: #3B1616;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 20px;
@@ -93,9 +109,9 @@
     margin: 0 auto;
   }
   
-  /* Completion / Score Section */
+  /* ✅ Completion / Score Section */
   .gp-completion-section {
-    background-color: #fff;
+    background-color: #3B1616;
     border-radius: 8px;
     padding: 16px;
     text-align: center;
@@ -103,31 +119,59 @@
   
   .gp-completion-section h3 {
     margin-top: 0;
-    color: #b81d41;
+    color: #ffcc80;
   }
   
   .gp-score-box {
     display: inline-block;
-    background-color: #ffefef;
+    background-color: #ff8c42;
     border-radius: 8px;
     padding: 16px;
     margin-top: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .gp-score-box:hover {
+    background-color: #ffcc80;
+    transform: scale(1.05);
   }
   
   .gp-score-label {
     margin: 0;
     font-size: 1rem;
-    color: #666;
+    color: #1c0e0e;
   }
   
   .gp-score-value {
     margin: 4px 0 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #b81d41;
+    color: #1c0e0e;
   }
   
-  /* Responsive Tweaks */
+  /* ✅ Button Effects */
+  .gp-button {
+    background-color: #ff8c42;
+    color: #1c0e0e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .gp-button:hover {
+    background-color: #ffcc80;
+    transform: scale(1.05);
+  }
+  
+  .gp-button:active {
+    background-color: #ffcc80;
+    transform: scale(0.95);
+  }
+  
+  /* ✅ Responsive Tweaks */
   @media (max-width: 480px) {
     .gp-days-row {
       flex-wrap: wrap;
