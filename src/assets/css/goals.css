@@ -1,0 +1,147 @@
+/* Main Container */
+.goals-progress-page {
+    background-color: #f9d2d2; /* Light pink background */
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .gp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .gp-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .gp-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .gp-menu-icon {
+    font-size: 1.4rem;
+  }
+  
+  /* Goals Section */
+  .gp-goals-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .gp-goals-section h3 {
+    margin: 0 0 8px 0;
+    color: #b81d41; /* Darker pink/red accent */
+  }
+  
+  .gp-workout-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    color: #333;
+  }
+  
+  .gp-time-range {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #666;
+  }
+  
+  /* Days Row */
+  .gp-days-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .gp-day-box {
+    background-color: #ffefef;
+    width: 30px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Chart Section */
+  .gp-chart-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .gp-chart {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* Completion / Score Section */
+  .gp-completion-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .gp-completion-section h3 {
+    margin-top: 0;
+    color: #b81d41;
+  }
+  
+  .gp-score-box {
+    display: inline-block;
+    background-color: #ffefef;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+  }
+  
+  .gp-score-label {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .gp-score-value {
+    margin: 4px 0 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b81d41;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 480px) {
+    .gp-days-row {
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .gp-day-box {
+      margin: 4px 0;
+    }
+    .gp-chart {
+      max-width: 200px;
+    }
+    .gp-header h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
