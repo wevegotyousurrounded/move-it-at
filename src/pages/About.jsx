@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/about.css"; 
 import heroImage from "/images/workout-1.png"; // Hero (top) image
-import aboutContentImage from "/images/workout-2.png"; // Replace with your second image
+import aboutContentImage from "/images/workout-2.jpg"; // Replace with your second image
 
 const About = () => {
   return (
