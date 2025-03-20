@@ -1,0 +1,77 @@
+/* 🌟 Main Container */
+.tracker-container {
+    background-color: #7c3232; /* Dark red */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 20px;
+  }
+  
+  /* 🌟 Video & Pose Tracking */
+  .tracker-workout {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .video-container, .pose-tracker {
+    width: 48%;
+    text-align: center;
+  }
+  
+  .workout-video, .next-workout-video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* 🌟 PoseNet Tracker */
+  .pose-tracking-frame {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #ffcc80;
+    border-radius: 10px;
+  }
+  
+  /* 🌟 Workout Info */
+  .tracker-info {
+    background-color: #283593; /* Deep Blue */
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  /* 🌟 Next Workout - Video */
+  .tracker-up-next {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .tracker-up-next h3 {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .next-workout-video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .next-workout-video:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🌟 Responsive */
+  @media (max-width: 600px) {
+    .tracker-workout {
+      flex-direction: column;
+    }
+  }
+  
