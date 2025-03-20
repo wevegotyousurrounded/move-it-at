@@ -1,13 +1,13 @@
-/* ✅ Page Background */
+/* 🌟 Main Page Background */
 .goals-progress-page {
-    background-color: #1c0e0e; /* Dark red-brown */
+    background-color: #1c0e0e; /* Dark background */
     min-height: 100vh;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     padding: 20px;
   }
   
-  /* ✅ Header */
+  /* 🌟 Header */
   .gp-header {
     display: flex;
     justify-content: space-between;
@@ -16,90 +16,91 @@
   }
   
   .gp-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 0;
-    color: #ffcc80; /* Soft warm accent */
+    color: #ffcc80; /* Warm Gold */
   }
   
-  .gp-menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #ffcc80;
-    transition: color 0.3s ease;
-  }
-  .gp-menu-btn:hover {
-    color: #ff8c42; /* Lighter orange hover */
-  }
-  
-  /* ✅ Goals Section */
+  /* 🌟 Goal Section (Top Card) */
   .gp-goals-section {
-    background-color: #3B1616; /* Dark container */
-    border-radius: 10px;
-    padding: 16px;
+    background-color: #3B1616;
+    border-radius: 12px;
+    padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    box-shadow: 0px 5px 15px rgba(255, 200, 120, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .gp-goals-section:hover {
+    transform: translateY(-5px);
   }
   
   .gp-goals-section h3 {
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
     color: #ffcc80;
   }
   
   .gp-workout-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0;
     color: #fff;
   }
   
   .gp-time-range {
-    font-size: 0.9rem;
-    margin: 0;
+    font-size: 1rem;
+    margin: 5px 0;
     color: #ff8c42;
+    font-weight: bold;
   }
   
-  /* ✅ Days Row */
+  /* 🌟 Days Row */
   .gp-days-row {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    gap: 8px;
   }
   
   .gp-day-box {
-    background-color: #3B1616; /* Darker background */
+    background-color: #3B1616;
     width: 40px;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 6px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #ffcc80;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
   }
   
   .gp-day-box:hover {
     background-color: #ff8c42;
     color: #1c0e0e;
+    transform: scale(1.1);
   }
   
-  /* ✅ Active Day */
+  /* Active Day */
   .gp-day-box.active {
     background-color: #ffcc80;
     color: #1c0e0e;
+    box-shadow: 0px 4px 10px rgba(255, 204, 128, 0.3);
   }
   
-  /* ✅ Chart Section */
+  /* 🌟 Chart Section */
   .gp-chart-section {
     background-color: #3B1616;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 16px;
     margin-bottom: 20px;
     text-align: center;
+    box-shadow: 0px 5px 15px rgba(255, 200, 120, 0.2);
   }
   
   .gp-chart {
@@ -109,23 +110,30 @@
     margin: 0 auto;
   }
   
-  /* ✅ Completion / Score Section */
+  /* 🌟 Completion / Score Section */
   .gp-completion-section {
     background-color: #3B1616;
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0px 5px 15px rgba(255, 200, 120, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .gp-completion-section:hover {
+    transform: scale(1.02);
   }
   
   .gp-completion-section h3 {
     margin-top: 0;
     color: #ffcc80;
+    font-size: 1.4rem;
   }
   
   .gp-score-box {
     display: inline-block;
     background-color: #ff8c42;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 16px;
     margin-top: 12px;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -133,7 +141,7 @@
   
   .gp-score-box:hover {
     background-color: #ffcc80;
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   
   .gp-score-label {
@@ -144,12 +152,12 @@
   
   .gp-score-value {
     margin: 4px 0 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #1c0e0e;
   }
   
-  /* ✅ Button Effects */
+  /* 🌟 Buttons */
   .gp-button {
     background-color: #ff8c42;
     color: #1c0e0e;
@@ -171,7 +179,7 @@
     transform: scale(0.95);
   }
   
-  /* ✅ Responsive Tweaks */
+  /* 🌟 Responsive Tweaks */
   @media (max-width: 480px) {
     .gp-days-row {
       flex-wrap: wrap;
@@ -184,7 +192,7 @@
       max-width: 200px;
     }
     .gp-header h2 {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
   
