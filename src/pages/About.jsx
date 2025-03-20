@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/about.css"; // Import the separate CSS file
 import aboutImage from "/images/workout-1.png"; // Hero Image
+import aboutImagee from "/images/workout-2.png";
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          <img src={aboutImage} alt="AI-powered workout tracking" />
+          <img src={aboutImagee} alt="AI-powered workout tracking" />
         </div>
       </section>
 
