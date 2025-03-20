@@ -33,29 +33,23 @@
   
   /* Goals Section */
   .gp-goals-section {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 20px;
+    background-color: #b81d41;
+    color: white;
     text-align: center;
-  }
-  
-  .gp-goals-section h3 {
-    margin: 0 0 8px 0;
-    color: #b81d41; /* Darker pink/red accent */
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
   
   .gp-workout-title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 0 0 4px 0;
-    color: #333;
+    margin: 0;
   }
   
   .gp-time-range {
     font-size: 0.9rem;
     margin: 0;
-    color: #666;
   }
   
   /* Days Row */
@@ -76,6 +70,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  .gp-day-box.active {
+    background-color: #b81d41;
+    color: white;
   }
   
   /* Chart Section */
