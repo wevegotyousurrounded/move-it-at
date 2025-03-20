@@ -8,12 +8,12 @@
     color: #fff;
 }
 
-/* 🔹 Hero Section */
+/* Hero Section */
 .about-hero {
     position: relative;
     width: 100%;
     height: 80vh;
-    background: url('/public/images/workout-1.png') no-repeat center center/cover;
+    background: url('/images/workout-1.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +49,7 @@
     max-width: 90%;
 }
 
-/* 🔹 About Content Section */
+/* About Content Section */
 .about-content {
     max-width: 1200px;
     display: flex;
@@ -58,14 +58,14 @@
     padding: 80px 5%;
 }
 
-/* 🔹 Text Column */
+/* Text Column */
 .about-text {
     flex: 1;
     font-size: 1.2rem;
     line-height: 1.8;
 }
 
-/* 🔹 Image Column */
+/* Image Column */
 .about-image {
     flex: 1;
     text-align: center;
@@ -77,29 +77,44 @@
     border-radius: 10px;
 }
 
-/* 🔹 Features Section */
+/* Features Section */
 .about-features {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
     padding: 60px 5%;
     background-color: #2E1A1A;
+    margin-bottom: 80px; /* Adds space above footer */
 }
 
-.feature-box {
+.feature-card {
     width: 30%;
+    background-color: #3E2723;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
-.feature-box h3 {
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
     font-size: 1.8rem;
     color: #FFB400;
     margin-bottom: 10px;
 }
 
-/* 🔹 Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 1024px) {
     .about-content {
         flex-direction: column;
@@ -110,7 +125,7 @@
         order: -1;
     }
 
-    .feature-box {
+    .feature-card {
         width: 45%;
     }
 }
@@ -124,7 +139,7 @@
         font-size: 1.2rem;
     }
 
-    .feature-box {
+    .feature-card {
         width: 90%;
     }
 }

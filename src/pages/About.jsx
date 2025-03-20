@@ -1,11 +1,11 @@
 import React from "react";
-import "../assets/css/about.css"; // Importing the separate CSS file
+import "../assets/css/about.css"; // Import the separate CSS file
 import aboutImage from "/images/workout-1.png"; // Hero Image
 
 const About = () => {
   return (
     <div className="about-page">
-      {/* 🔹 Hero Section */}
+      {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>About MOVE IT</h1>
@@ -13,7 +13,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* 🔹 About Content Section */}
+      {/* About Content Section */}
       <section className="about-content">
         <div className="about-text">
           <h2>Our Mission</h2>
@@ -28,18 +28,21 @@ const About = () => {
         </div>
       </section>
 
-      {/* 🔹 Features Section */}
+      {/* Features Section */}
       <section className="about-features">
-        <div className="feature-box">
-          <h3>📊 Real-time Feedback</h3>
+        <div className="feature-card">
+          <img src="/images/feedback-icon.png" alt="Real-time Feedback" className="feature-icon" />
+          <h3>Real-time Feedback</h3>
           <p>Track your movements and get instant AI-powered corrections.</p>
         </div>
-        <div className="feature-box">
-          <h3>🔍 Posture Analysis</h3>
+        <div className="feature-card">
+          <img src="/images/posture-icon.png" alt="Posture Analysis" className="feature-icon" />
+          <h3>Posture Analysis</h3>
           <p>Reduce injury risks with form correction insights.</p>
         </div>
-        <div className="feature-box">
-          <h3>📈 Progress Tracking</h3>
+        <div className="feature-card">
+          <img src="/images/progress-icon.png" alt="Progress Tracking" className="feature-icon" />
+          <h3>Progress Tracking</h3>
           <p>Measure improvements with data-driven analytics.</p>
         </div>
       </section>
