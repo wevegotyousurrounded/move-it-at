@@ -13,26 +13,27 @@
     position: relative;
     width: 100%;
     height: 80vh;
-    background: url('/images/workout-1.png') no-repeat center center/cover;
+    /* Removed the background property here since we use inline style in JSX */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.about-hero::before {
-    content: "";
+/* Dark overlay for hero (optional) */
+.about-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 0; /* behind the content */
 }
 
 .about-hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* above the overlay */
     max-width: 700px;
 }
 
@@ -58,14 +59,12 @@
     padding: 80px 5%;
 }
 
-/* Text Column */
 .about-text {
     flex: 1;
     font-size: 1.2rem;
     line-height: 1.8;
 }
 
-/* Image Column */
 .about-image {
     flex: 1;
     text-align: center;
@@ -85,7 +84,7 @@
     flex-wrap: wrap;
     padding: 60px 5%;
     background-color: #2E1A1A;
-    margin-bottom: 80px; /* Adds space above footer */
+    margin-bottom: 80px; /* space above footer */
 }
 
 .feature-card {
