@@ -1,5 +1,5 @@
 import React from "react";
-import "./goalsProgress.css";
+
 import "../assets/css/goals.css";
 
 
