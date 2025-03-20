@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/goals.css"; // Updated import path
+import "../assets/css/goals.css"; 
+
 
 const Goals = () => {
   return (
