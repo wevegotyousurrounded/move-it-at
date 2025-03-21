@@ -1,10 +1,10 @@
 import React from "react";
 import "../assets/css/tracker.css"; // Import CSS file
 
-// Video sources (Update with actual video URLs)
-const workoutVideoSrc = "/videos/bicep.mp4"; 
-const nextWorkoutVideoSrc = "/videos/next.mp4"; 
-//const poseTrackingURL = "http://your-tracker-device-ip:5000/"; // Replace with your PoseNet tracker URL
+// Updated video sources (Ensure these URLs are correct)
+const workoutVideoSrc = "https://your-server.com/bicep.mp4"; 
+const nextWorkoutVideoSrc = "https://your-server.com/next.mp4"; 
+const poseTrackingURL = "http://your-tracker-device-ip:5000/"; // Update with actual device URL
 
 const WorkoutTracker = () => {
   return (
@@ -14,7 +14,7 @@ const WorkoutTracker = () => {
       <div className="tracker-workout">
         {/* Current Workout Video */}
         <div className="video-container">
-          <h3>Current Workout</h3>
+          <h3>Current Workout: Bicep Curl</h3>
           <video controls autoPlay loop muted className="workout-video">
             <source src={workoutVideoSrc} type="video/mp4" />
             Your browser does not support the video tag.
@@ -37,7 +37,7 @@ const WorkoutTracker = () => {
       <div className="tracker-info-container">
         {/* Workout Details */}
         <div className="tracker-info">
-          
+          <h3>Workout Stats</h3>
           <p><strong>TIME:</strong> 10 MINS</p>
           <p><strong>WORKOUT:</strong> Bicep Curl</p>
           <p className="encouragement">YOU ARE DOING GREAT! KEEP IT UP</p>
