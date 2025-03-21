@@ -44,7 +44,7 @@ const Plans = () => {
                 <div className="workout-carousel">
                     <button className="scroll-btn left" onClick={() => scrollLeft("myWorkouts")}>&lt;</button>
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
-                        <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
+                        <div className="workout-card highlight" onClick={() => navigate("/WorkoutTracker")}> 
                             <img src={squatsImage} alt="Squats" />
                             <div className="workout-title">Upper-body</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
