@@ -42,7 +42,7 @@ const Plans = () => {
                     <h2>My Workouts</h2>
                 </div>
                 <div className="workout-carousel">
-                    <button className="scroll-btn left" onClick={() => navigate("/WorkoutTracker")}>&lt;</button>
+                    <button className="scroll-btn left" onClick={() => navigate("/WorkoutTracker")}></button>
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
                         <div className="workout-card highlight" onClick={() => navigate("/WorkoutTracker")}> 
                             <img src={squatsImage} alt="Squats" />
