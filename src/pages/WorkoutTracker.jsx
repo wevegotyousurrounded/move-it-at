@@ -1,10 +1,9 @@
 import React from "react";
 import "../assets/css/tracker.css"; // Import CSS file
 
-// Updated video sources
-const workoutVideoSrc = "/public/videos/bicep.mp4"; 
-const nextWorkoutVideoSrc = "/public/videos/next.mp4"; 
-const poseTrackingURL = "http://your-tracker-device-ip:5000/"; // Replace with actual PoseNet URL
+// Corrected video paths
+const workoutVideoSrc = "/videos/bicep.mp4"; 
+const nextWorkoutVideoSrc = "/videos/next.mp4"; 
 
 const WorkoutTracker = () => {
   return (
@@ -26,7 +25,7 @@ const WorkoutTracker = () => {
         <div className="pose-tracker">
           <h3>Live Pose Tracking</h3>
           <iframe
-            src={poseTrackingURL}
+            src="http://your-tracker-device-ip:5000/"
             title="Pose Tracking"
             className="pose-tracking-frame"
             allow="camera; fullscreen"
