@@ -7,7 +7,7 @@ import dumbbellImage from "/images/dumbbell.jpg";
 import absImage from "/images/abs.jpg";
 import armImage from "/images/arm.jpg";
 import cardioImage from "/images/cardio.jpg";
-import squatsImage from "/images/squats.jpg";
+import squatsImage from "/images/row.jpg";
 import legPressImage from "/images/plank.jpg";
 import yogaImage from "/images/yoga.jpg";
 import aerobicsImage from "/images/aerobics.jpg";
@@ -46,7 +46,7 @@ const Plans = () => {
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
                         <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
                             <img src={squatsImage} alt="Squats" />
-                            <div className="workout-title">Squats</div>
+                            <div className="workout-title">Upper-body</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
                         </div>
                         <div className="workout-card"> 

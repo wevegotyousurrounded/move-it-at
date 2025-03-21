@@ -10,7 +10,7 @@ const WorkoutTracker = () => {
       <div className="tracker-top">
         <div className="video-container">
           <h3>Current Workout: Bicep Curl</h3>
-          <video controls autoPlay loop muted className="workout-video">
+          <video controls autoPlay loop muted className="workout-video" crossOrigin="anonymous">
             <source src={workoutVideoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -19,7 +19,7 @@ const WorkoutTracker = () => {
         <div className="pose-tracker">
           <h3>Live Pose Tracking</h3>
           <iframe
-            src="http://your-tracker-device-ip:5000/"
+            src="http://localhost:5000/"
             title="Pose Tracking"
             className="pose-tracking-frame"
             allow="camera; fullscreen"
