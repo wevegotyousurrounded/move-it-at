@@ -2,8 +2,8 @@ import React from "react";
 import "../assets/css/tracker.css"; // Import CSS file
 
 // Updated video sources
-const workoutVideoSrc = "https://your-server.com/bicep.mp4"; 
-const nextWorkoutVideoSrc = "https://your-server.com/next.mp4"; 
+const workoutVideoSrc = "/public/videos/bicep.mp4"; 
+const nextWorkoutVideoSrc = "/public/videos/next.mp4"; 
 const poseTrackingURL = "http://your-tracker-device-ip:5000/"; // Replace with actual PoseNet URL
 
 const WorkoutTracker = () => {
