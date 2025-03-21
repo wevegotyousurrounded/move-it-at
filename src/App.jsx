@@ -19,7 +19,7 @@ function App() {
 
         {/* Ensure paths include move-it for GitHub Pages */}
         <Route path="/home" element={<Home />} />
-        <Route path="/workout" element={<WorkoutTracker />} />
+        <Route path="/workout-tracker" element={<WorkoutTracker />} />
         <Route path="/goals" element={<Goals />} />
         <Route path="/plans" element={<Plans />} />
         <Route path="/about" element={<About />} />

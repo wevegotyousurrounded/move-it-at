@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import "../assets/css/workoutPlans.css";
 import { useNavigate } from "react-router-dom";
+
+// Import workout images
 import hitImage from "/images/hit.jpg";
 import strengthImage from "/images/strength.jpg";
 import dumbbellImage from "/images/dumbbell.jpg";
@@ -14,7 +16,9 @@ import aerobicsImage from "/images/aerobics.jpg";
 import meditationImage from "/images/meditation.jpg";
 
 const Plans = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // ✅ Correct usage of navigate
+
+    // Scrollable references for workout sections
     const scrollRefs = {
         intense: useRef(null),
         flexibility: useRef(null),
@@ -22,6 +26,7 @@ const Plans = () => {
         myWorkouts: useRef(null)
     };
 
+    // Scroll Functions
     const scrollLeft = (ref) => {
         if (scrollRefs[ref].current) {
             scrollRefs[ref].current.scrollBy({ left: -300, behavior: "smooth" });
@@ -42,18 +47,22 @@ const Plans = () => {
                     <h2>My Workouts</h2>
                 </div>
                 <div className="workout-carousel">
-                    <button className="scroll-btn left" onClick={() => navigate("/WorkoutTracker")}></button>
+                    <button className="scroll-btn left" onClick={() => scrollLeft("myWorkouts")}>&lt;</button>
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
-                        <div className="workout-card highlight" onClick={() => navigate("/WorkoutTracker")}> 
-                            <img src={squatsImage} alt="Squats" />
+                        
+                        {/* ✅ Clicking this will navigate to WorkoutTracker */}
+                        <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
+                            <img src={squatsImage} alt="Upper-body Workout" />
                             <div className="workout-title">Upper-body</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
                         </div>
+
                         <div className="workout-card"> 
                             <img src={legPressImage} alt="Planks" />
                             <div className="workout-title">Plank</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
                         </div>
+
                     </div>
                     <button className="scroll-btn right" onClick={() => scrollRight("myWorkouts")}>&gt;</button>
                 </div>
@@ -67,7 +76,7 @@ const Plans = () => {
                     <div className="workout-scroll" ref={scrollRefs.intense}>
                         <div className="workout-card">
                             <img src={hitImage} alt="10 mins HIIT" />
-                            <div className="workout-title">10 mins HIT</div>
+                            <div className="workout-title">10 mins HIIT</div>
                         </div>
                         <div className="workout-card">
                             <img src={strengthImage} alt="15 mins Strength Workout" />
