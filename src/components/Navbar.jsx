@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="logo">MOVE IT</div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/workout">Workout Tracker</Link></li>
+        <li><Link to="/workout-tracker">Workout Tracker</Link></li>
         <li><Link to="/goals">Goals & Progress</Link></li>
         <li><Link to="/plans">Workout Plans</Link></li>
         <li><Link to="/about">About</Link></li>

@@ -51,7 +51,7 @@ const Plans = () => {
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
                         
                         {/* ✅ Clicking this will navigate to WorkoutTracker */}
-                        <div className="workout-card highlight" onClick={() => navigate("/workout")}> 
+                        <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
                             <img src={squatsImage} alt="Upper-body Workout" />
                             <div className="workout-title">Upper-body</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
