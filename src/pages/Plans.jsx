@@ -9,8 +9,8 @@ import dumbbellImage from "/images/dumbbell.jpg";
 import absImage from "/images/abs.jpg";
 import armImage from "/images/arm.jpg";
 import cardioImage from "/images/cardio.jpg";
-import squatsImage from "/images/row.jpg";
-import legPressImage from "/images/plank.jpg";
+import bicepImage from "/images/bicepcurl.jpg";
+import plankImage from "/images/plank.jpg";
 import yogaImage from "/images/yoga.jpg";
 import aerobicsImage from "/images/aerobics.jpg";
 import meditationImage from "/images/meditation.jpg";
@@ -52,13 +52,13 @@ const Plans = () => {
                         
                         {/* ✅ Clicking this will navigate to WorkoutTracker */}
                         <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
-                            <img src={squatsImage} alt="Upper-body Workout" />
-                            <div className="workout-title">Upper-body</div>
+                            <img src={bicepImage} alt="Bicep Curl" />
+                            <div className="workout-title">Bicep Curl</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
                         </div>
 
                         <div className="workout-card"> 
-                            <img src={legPressImage} alt="Planks" />
+                            <img src={plankImage} alt="Planks" />
                             <div className="workout-title">Plank</div>
                             <button className="resume-btn">▶</button> {/* Play icon */}
                         </div>

@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "../assets/css/styles.css";
 import { useNavigate } from "react-router-dom"; // 🔹 Import useNavigate
-import squatsImage from "/images/squats.jpg";
-import legPressImage from "/images/plank.jpg";
+import bicepImage from "/images/bicepcurl.jpg";
+import plankImage from "/images/plank.jpg";
 
 const Home = () => {
   const navigate = useNavigate(); // 🔹 Create navigate function
@@ -41,12 +41,12 @@ const Home = () => {
             <button className="scroll-btn left" onClick={scrollLeft}>&lt;</button>
             <div className="workout-scroll" ref={myWorkoutsRef}>
               <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}>
-                <img src={squatsImage} alt="Squats" />
-                <div className="workout-title">Squats</div>
+                <img src={bicepImage} alt="BicepCurl" />
+                <div className="workout-title">Bicep Curl</div>
                 <button className="resume-btn">▶</button>
               </div>
               <div className="workout-card">
-                <img src={legPressImage} alt="Planks" />
+                <img src={plankImage} alt="Planks" />
                 <div className="workout-title">Plank</div>
                 <button className="resume-btn">▶</button>
               </div>
