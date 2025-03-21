@@ -1,16 +1,44 @@
-import React from "react";
-import "../assets/css/tracker.css"; 
+import React, { useEffect, useRef } from "react";
+import "../assets/css/tracker.css";
 
-const workoutVideoSrc = "/videos/bicep.mp4"; 
-const nextWorkoutVideoSrc = "/videos/next.mp4"; 
+const workoutVideoSrc = "/videos/bicep.mp4";
+const nextWorkoutVideoSrc = "/videos/next.mp4";
 
 const WorkoutTracker = () => {
+  const workoutVideoRef = useRef(null);
+  const nextWorkoutVideoRef = useRef(null);
+
+  useEffect(() => {
+    // Ensure autoplay works after rendering
+    if (workoutVideoRef.current) {
+      workoutVideoRef.current.muted = true;
+      workoutVideoRef.current.play().catch((error) => {
+        console.warn("Workout video autoplay blocked:", error);
+      });
+    }
+
+    if (nextWorkoutVideoRef.current) {
+      nextWorkoutVideoRef.current.muted = true;
+      nextWorkoutVideoRef.current.play().catch((error) => {
+        console.warn("Next workout video autoplay blocked:", error);
+      });
+    }
+  }, []);
+
   return (
     <div className="tracker-container">
       <div className="tracker-top">
         <div className="video-container">
           <h3>Current Workout: Bicep Curl</h3>
-          <video controls autoPlay loop muted className="workout-video" crossOrigin="anonymous">
+          <video
+            ref={workoutVideoRef}
+            controls
+            autoPlay
+            loop
+            muted
+            className="workout-video"
+            onError={() => console.error("Failed to load bicep.mp4")}
+          >
             <source src={workoutVideoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -37,7 +65,15 @@ const WorkoutTracker = () => {
 
         <div className="next-workout">
           <h3>Up Next</h3>
-          <video controls autoPlay loop muted className="next-workout-video">
+          <video
+            ref={nextWorkoutVideoRef}
+            controls
+            autoPlay
+            loop
+            muted
+            className="next-workout-video"
+            onError={() => console.error("Failed to load next.mp4")}
+          >
             <source src={nextWorkoutVideoSrc} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
