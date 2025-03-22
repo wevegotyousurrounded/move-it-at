@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import "../assets/css/goals.css"; 
 
@@ -37,7 +34,7 @@ const Goals = () => {
         <div className="gp-day-box">10<br />Wed</div>
       </section>
 
-      {/* Progress Chart (Placeholder) */}
+      {/* Progress Chart */}
       <section className="gp-chart-section">
         <svg className="gp-chart" viewBox="0 0 300 100">
           <text x="30" y="95" fill="#333" fontSize="10">2pm</text>

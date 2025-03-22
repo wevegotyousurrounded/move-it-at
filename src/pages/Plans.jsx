@@ -17,7 +17,7 @@ import aerobicsImage from "/images/aerobics.jpg";
 import meditationImage from "/images/meditation.jpg";
 
 const Plans = () => {
-    const navigate = useNavigate(); // ✅ Correct usage of navigate
+    const navigate = useNavigate(); 
 
     // Scrollable references for workout sections
     const scrollRefs = {
@@ -51,7 +51,7 @@ const Plans = () => {
                     <button className="scroll-btn left" onClick={() => scrollLeft("myWorkouts")}>&lt;</button>
                     <div className="workout-scroll" ref={scrollRefs.myWorkouts}>
                         
-                        {/* ✅ Clicking this will navigate to WorkoutTracker */}
+                        {/*  Clicking this will navigate to WorkoutTracker */}
                         <div className="workout-card highlight" onClick={() => navigate("/workout-tracker")}> 
                             <img src={bicepImage} alt="Bicep Curl" />
                             <div className="workout-title">Bicep Curl</div>

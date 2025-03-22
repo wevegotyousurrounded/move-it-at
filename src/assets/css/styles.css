@@ -1,5 +1,3 @@
-
-
 /* Import Josefin Sans Font */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
@@ -17,7 +15,7 @@ body, html {
 .navbar {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensures navbar elements stay inside */
+    flex-wrap: wrap; 
     align-items: center;
     padding: 10px 10px;
     background-color: #000000;
@@ -34,16 +32,16 @@ body, html {
     font-weight: bold;
     color: white;
     margin-left: 10px;
-    white-space: nowrap; /* Prevents breaking */
+    white-space: nowrap; 
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px; /* Adjusted spacing */
+    gap: 20px; 
     padding: 0;
     margin-right: 20px;
-    flex-wrap: nowrap; /* Prevents breaking */
+    flex-wrap: nowrap;
 }
 
 .nav-links li {
@@ -53,9 +51,9 @@ body, html {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 16px; /* Slightly reduced font size to fit */
+    font-size: 16px; 
     transition: color 0.3s;
-    white-space: nowrap; /* Prevents line breaks */
+    white-space: nowrap; 
 }
 
 .nav-links a:hover {
@@ -94,7 +92,7 @@ body, html {
     justify-content: flex-start;
     padding-left: 5%;
     color: white;
-    margin-bottom: 0; /* No margin */
+    margin-bottom: 0; 
 }
 
 .hero-content {
@@ -142,8 +140,8 @@ body, html {
 
 /* Footer Styling */
 footer {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
+    background-color: #000000; 
+    color: #ffffff; 
     text-align: center;
     padding: 20px 0;
     font-size: 1rem;
@@ -157,7 +155,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #FFB400; /* Gold accent for hover */
+    color: #FFB400; 
 }
 
 /* Final Section - Image Left, Text Right */
@@ -165,12 +163,12 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background-color: #1c0e0e; /* Ensure full red background */
+    height: 100vh; 
+    background-color: #1c0e0e; 
     padding: 0;
     overflow: hidden;
     width: 100vw;
-    margin-top: 0; /* No margin */
+    margin-top: 0; 
 }
 
 /* Container to align image and text */
@@ -178,29 +176,29 @@ footer a:hover {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 100vh; /* Ensures full height */
+    height: 100vh; 
 }
 
 /* Image on the left */
 .final-image {
-    flex: 1; /* 50% of the screen */
+    flex: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 100vh; /* Ensures full section height */
+    height: 100vh; 
 }
 
 .final-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures full image without distortion */
+    object-fit: cover; 
 }
 
 /* Text box on the right */
 .final-text-box {
-    flex: 1; /* 50% of the screen */
-    background: #1c0e0e; /* Full red background */
+    flex: 1; 
+    background: #1c0e0e; 
     padding: 50px;
     color: white;
     text-align: center;
@@ -208,7 +206,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh; /* Ensures full height */
+    height: 100vh; 
 }
 
 /* Headings */
@@ -220,7 +218,7 @@ footer a:hover {
 .final-text-box h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #FFC107; /* Gold accent */
+    color: #FFC107; 
 }
 
 /* Paragraph */
@@ -233,16 +231,16 @@ footer a:hover {
 .cta-button {
     background: #FFC107;
     color: #1A1A1A;
-    padding: 10px 20px; /* Reduce padding */
+    padding: 10px 20px; 
     border: none;
-    font-size: 1rem; /* Slightly smaller text */
+    font-size: 1rem; 
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
     transition: background 0.3s;
     border-radius: 5px;
-    width: fit-content; /* Makes sure it's only as wide as the text */
-    min-width: 150px; /* Ensures it doesn't get too small */
+    width: fit-content; 
+    min-width: 150px; 
 }
 
 .cta-button:hover {
@@ -264,7 +262,7 @@ footer a:hover {
     min-width: 150px;
     text-align: center;
     display: flex;
-    justify-content: center; /* 🔹 Centers text inside button */
+    justify-content: center; 
 }
 
 .cta-button1:hover {
@@ -278,7 +276,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0; /* Remove any padding */
+    padding: 0; 
     background-color: #ea4a4a5a;
     position: relative;
 }
@@ -288,19 +286,19 @@ footer a:hover {
     width: 100%;
     max-width: 1400px;
     background: #3B1616;
-    padding-bottom: 0; /* Ensure no extra padding */
-    padding-top: 40px; /* Maintain space */
+    padding-bottom: 0; 
+    padding-top: 40px; 
     border-radius: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px; /* Pull the next section up */
+    margin-bottom: 60px; 
 }
 
 /* Remove the black space between My Workouts & the next section */
 .my-workouts-home + .next-section {
-    margin-top: 0; /* Remove top margin */
-    padding-top: 0; /* Remove any extra padding */
+    margin-top: 0; 
+    padding-top: 0; 
 }
 
 

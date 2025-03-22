@@ -1,9 +1,7 @@
-
-
 import React from "react";
 import "../assets/css/about.css"; 
-import heroImage from "/images/workout-1.png"; // Hero (top) image
-import aboutContentImage from "/images/workout-2.jpg"; // Replace with your second image
+import heroImage from "/images/workout-1.png"; 
+import aboutContentImage from "/images/workout-2.jpg"; 
 
 const About = () => {
   return (
@@ -15,7 +13,7 @@ const About = () => {
           background: `url(${heroImage}) no-repeat center center/cover`,
         }}
       >
-        <div className="about-hero-overlay"></div> {/* We'll handle the dark overlay in CSS */}
+        <div className="about-hero-overlay"></div> 
         <div className="about-hero-content">
           <h1>About MOVE IT</h1>
           <p>
@@ -35,7 +33,6 @@ const About = () => {
           </p>
         </div>
         <div className="about-image">
-          {/* Use the new image here */}
           <img src={aboutContentImage} alt="AI-powered workout tracking" />
         </div>
       </section>

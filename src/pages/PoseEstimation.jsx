@@ -1,12 +1,10 @@
-
-
 import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl";
 import * as poseDetection from "@tensorflow-models/pose-detection";
 import React, { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
 
-// ✅ Initialize TensorFlow backend
+//  Initialize TensorFlow backend
 async function initializeTF() {
   await tf.ready();
   try {
@@ -52,7 +50,7 @@ const PoseEstimation = () => {
     loadModel();
   }, []);
 
-  // ✅ (Optional) Send pose data to backend if needed
+  // Send pose data to backend if needed
   async function sendPoseImage(imageData) {
     try {
       const response = await fetch("http://127.0.0.1:5000/detect_pose", {
@@ -73,7 +71,7 @@ const PoseEstimation = () => {
     }
   }
 
-  // ✅ Run Pose Detection continuously
+  //  Run Pose Detection continuously
   useEffect(() => {
     if (!detector) return;
     console.log("🚀 Running Pose Detection...");
@@ -106,7 +104,7 @@ const PoseEstimation = () => {
     requestAnimationFrame(processFrame);
   }, [detector]);
 
-  // ✅ Keypoint pairs for drawing skeleton lines
+  //  Keypoint pairs for drawing skeleton lines
   const keypointPairs = [
     [5, 7],
     [7, 9],
@@ -121,7 +119,7 @@ const PoseEstimation = () => {
     [14, 16],
   ];
 
-  // ✅ Draw keypoints & skeleton on the canvas
+  //  Draw keypoints & skeleton on the canvas
   const drawSkeleton = (pose, currentAngle) => {
     const ctx = canvasRef.current?.getContext("2d");
     if (!ctx) return;
@@ -165,7 +163,7 @@ const PoseEstimation = () => {
     });
   };
 
-  // ✅ Rep Counting Logic (using elbow angle range [65,75] for a rep)
+  //  Rep Counting Logic (using elbow angle range [65,75] for a rep)
   const handleRepCount = (elbowAngle) => {
     const minElbowAngleLow = 65;
     const minElbowAngleHigh = 75;
@@ -183,7 +181,7 @@ const PoseEstimation = () => {
     }
   };
 
-  // ✅ Calculate angle between three points
+  //  Calculate angle between three points
   function calculate_angle(a, b, c) {
     if (!a || !b || !c) return 0;
     const radians =
@@ -194,7 +192,7 @@ const PoseEstimation = () => {
     return angle;
   }
 
-  // ✅ Calculate left elbow angle (Indices: 5 = shoulder, 7 = elbow, 9 = wrist)
+  //  Calculate left elbow angle (Indices: 5 = shoulder, 7 = elbow, 9 = wrist)
   function calculateElbowAngle(keypoints) {
     const shoulder = keypoints[5];
     const elbow = keypoints[7];
@@ -204,7 +202,7 @@ const PoseEstimation = () => {
     return calculate_angle(shoulder, elbow, wrist);
   }
 
-  // ✅ (Optional) Calculate right elbow angle if needed
+  // Calculate right elbow angle if needed
   function calculateRightElbowAngle(keypoints) {
     const shoulder = keypoints[6];
     const elbow = keypoints[8];

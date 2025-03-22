@@ -1,15 +1,15 @@
 
 
-/* 🌟 Main Page Background */
+/* Main Page Background */
 .goals-progress-page {
-    background-color: #1c0e0e; /* Dark background */
+    background-color: #1c0e0e; 
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     padding: 20px;
   }
   
-  /* 🌟 Header */
+  /* Header */
   .gp-header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     color: #ffcc80; /* Warm Gold */
   }
   
-  /* 🌟 Goal Section (Top Card) */
+  /* Goal Section (Top Card) */
   .gp-goals-section {
     background-color: #3B1616;
     border-radius: 12px;
@@ -58,7 +58,7 @@
     font-weight: bold;
   }
   
-  /* 🌟 Days Row */
+  /* Days Row */
   .gp-days-row {
     display: flex;
     justify-content: space-around;
@@ -95,7 +95,7 @@
     box-shadow: 0px 4px 10px rgba(255, 204, 128, 0.3);
   }
   
-  /* 🌟 Chart Section */
+  /* Chart Section */
   .gp-chart-section {
     background-color: #3B1616;
     border-radius: 10px;
@@ -112,7 +112,7 @@
     margin: 0 auto;
   }
   
-  /* 🌟 Completion / Score Section */
+  /* Completion / Score Section */
   .gp-completion-section {
     background-color: #3B1616;
     border-radius: 12px;
@@ -159,7 +159,7 @@
     color: #1c0e0e;
   }
   
-  /* 🌟 Buttons */
+  /* Buttons */
   .gp-button {
     background-color: #ff8c42;
     color: #1c0e0e;
@@ -181,7 +181,7 @@
     transform: scale(0.95);
   }
   
-  /* 🌟 Responsive Tweaks */
+  /* Responsive Tweaks */
   @media (max-width: 480px) {
     .gp-days-row {
       flex-wrap: wrap;

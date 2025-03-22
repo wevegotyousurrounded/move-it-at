@@ -1,13 +1,11 @@
-
-
 import React, { useRef } from "react";
 import "../assets/css/styles.css";
-import { useNavigate } from "react-router-dom"; // 🔹 Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import bicepImage from "/images/bicepcurl.jpg";
 import plankImage from "/images/plank.jpg";
 
 const Home = () => {
-  const navigate = useNavigate(); // 🔹 Create navigate function
+  const navigate = useNavigate(); 
   const myWorkoutsRef = useRef(null);
 
   const scrollLeft = () => {

@@ -1,8 +1,6 @@
-
-
 import React, { useEffect, useRef } from "react";
 import "../assets/css/tracker.css";
-import PoseEstimation from "./PoseEstimation"; // Import PoseEstimation component
+import PoseEstimation from "./PoseEstimation"; 
 
 const workoutVideoSrc = "/videos/bicep.mp4";
 const nextWorkoutVideoSrc = "/videos/next.mp4";
