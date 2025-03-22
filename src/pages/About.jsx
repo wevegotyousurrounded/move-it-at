@@ -1,8 +1,4 @@
-{/*
-COMP 3450:
-Avneet Kaur (T00716171)
-Thamalee Dasanayake (T00703473)
-*/}
+
 
 import React from "react";
 import "../assets/css/about.css"; 
