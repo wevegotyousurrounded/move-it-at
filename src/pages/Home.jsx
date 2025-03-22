@@ -1,9 +1,3 @@
-/*
-COMP 3450:
-Avneet Kaur (T00716171)
-Thamalee Dasanayake (T00703473)
-*/
-
 import React, { useRef } from "react";
 import "../assets/css/styles.css";
 import { useNavigate } from "react-router-dom"; // 🔹 Import useNavigate
