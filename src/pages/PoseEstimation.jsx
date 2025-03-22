@@ -1,3 +1,9 @@
+/*
+COMP 3450:
+Avneet Kaur (T00716171)
+Thamalee Dasanayake (T00703473)
+*/
+
 import * as tf from "@tensorflow/tfjs";
 import "@tensorflow/tfjs-backend-webgl";
 import * as poseDetection from "@tensorflow-models/pose-detection";
@@ -214,7 +220,7 @@ const PoseEstimation = () => {
 
   return (
     <div className="pose-estimation-container">
-      <h2>Live Pose Estimation</h2>
+      <h2>Live Pose Tracking</h2>
       <div
         className="video-container"
         style={{ position: "relative", width: 640, height: 480 }}

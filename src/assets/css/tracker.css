@@ -1,3 +1,9 @@
+/*
+COMP 3450:
+Avneet Kaur (T00716171)
+Thamalee Dasanayake (T00703473)
+*/
+
 /* General Layout */
 .tracker-container {
     display: flex;
@@ -6,6 +12,7 @@
     padding: 20px;
     background-color: #1c0e0e;
     color: white;
+    padding-top: 120px;
 }
 
 /* Top Section: Video & Tracking */
@@ -13,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    
     max-width: 1200px;
     gap: 20px; 
     margin-bottom: 30px;
@@ -22,7 +28,7 @@
 /* Force a tall, vertical shape on the container */
 .video-container {
     width: 300px;        /* or whatever width you prefer */
-    height: 600px;       /* or whatever tall dimension you want */
+    height: 700px;     /* or whatever tall dimension you want */
     position: relative;
     overflow: hidden;    /* ensures no scrollbars for cropped areas */
     margin: 0 auto;      /* optional: center horizontally if you like */

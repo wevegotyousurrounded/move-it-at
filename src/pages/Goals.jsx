@@ -1,3 +1,10 @@
+/*
+COMP 3450:
+Avneet Kaur (T00716171)
+Thamalee Dasanayake (T00703473)
+*/
+
+
 import React from "react";
 import "../assets/css/goals.css"; 
 
@@ -16,8 +23,8 @@ const Goals = () => {
       {/* Goals Overview */}
       <section className="gp-goals-section">
         <h3>Your Goals for today</h3>
-        <p className="gp-workout-title">Complete beginners AB Workout</p>
-        <p className="gp-time-range">4pm - 6pm</p>
+        <p className="gp-workout-title">Bicep Curl</p>
+        <p className="gp-time-range">4pm - 4:30pm</p>
       </section>
 
       {/* Days Row */}
@@ -62,7 +69,7 @@ const Goals = () => {
       <section className="gp-completion-section">
         <h3>Hello Adam, JOB WELL DONE!</h3>
         <p>You completed your workout</p>
-        <p>You Finished Beginner AB Workout</p>
+        <p>You Finished Bicep Curl</p>
         <div className="gp-score-box">
           <p className="gp-score-label">Your Score</p>
           <p className="gp-score-value">62 / 100</p>

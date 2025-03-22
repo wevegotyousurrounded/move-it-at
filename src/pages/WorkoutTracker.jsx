@@ -1,3 +1,9 @@
+/*
+COMP 3450:
+Avneet Kaur (T00716171)
+Thamalee Dasanayake (T00703473)
+*/
+
 import React, { useEffect, useRef } from "react";
 import "../assets/css/tracker.css";
 import PoseEstimation from "./PoseEstimation"; // Import PoseEstimation component
@@ -44,7 +50,6 @@ const WorkoutTracker = () => {
 </div>
 
       <div className="pose-tracker">
-        <h3>Live Pose Tracking</h3>
           <PoseEstimation />
       </div>
 
